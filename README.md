@@ -6,6 +6,9 @@ I only ported it for easy integration with Laravel.
 
 ## WARNING: NOT TESTED!
 ### Installation
+```
+composer require escapeboy/borica
+```
 This package works with auto-discovery. For Laravel <5.5 you should register it manually:
 
 ```
