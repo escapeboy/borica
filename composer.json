@@ -1,0 +1,40 @@
+{
+  "name": "escapeboy/borica",
+  "description": "Borica payment package",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "borica",
+    "payment"
+  ],
+  "authors": [
+    {
+      "name": "Miroslav Vitanov",
+      "email": "mvvitanov@gmail.com",
+      "role": "Main Developer"
+    },
+    {
+      "name": "Nikola Katsarov",
+      "email": "katsarov@gmail.com",
+      "role": "Laravel Package developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.0",
+    "illuminate/support": "~5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Borica\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Borica\\BoricaServiceProvider"
+      ]
+    }
+  }
+}
