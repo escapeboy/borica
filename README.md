@@ -1,5 +1,9 @@
 ##Laravel Borica Package
 
+All kudos goes to original author https://github.com/mirovit/borica-api
+Please star it! 
+I only ported it for easy integration with Laravel.
+
 ##WARNING: NOT TESTED!
 ###Installation
 This package works with auto-discovery. For Laravel <5.5 you should register it manually:
