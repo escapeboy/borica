@@ -1,11 +1,11 @@
-##Laravel Borica Package
+## Laravel Borica Package
 
 All kudos goes to original author https://github.com/mirovit/borica-api
 Please star it! 
 I only ported it for easy integration with Laravel.
 
-##WARNING: NOT TESTED!
-###Installation
+## WARNING: NOT TESTED!
+### Installation
 This package works with auto-discovery. For Laravel <5.5 you should register it manually:
 
 ```
@@ -18,9 +18,9 @@ Publish package config
 php artisan vendor:publish --provider="Borica\BoricaServiceProvider"
 ```
 
-##Usage
+## Usage
 
-###Registering of a transaction
+### Registering of a transaction
 ```
 $borica = new \Borica\Factory();
 $borica->request()
@@ -30,7 +30,7 @@ $borica->request()
         ->currency('EUR') // The currency of the payment
         ->register(); // Type of the request
 ```
-###Check status of a transaction
+### Check status of a transaction
 ```
 $factory->request()
         ->amount('1') // 1 EUR
@@ -39,7 +39,7 @@ $factory->request()
         ->currency('EUR') // The currency of the payment
         ->status(); // Type of the request
 ```
-###Reverse a transaction
+### Reverse a transaction
 ```
 $factory->request()
         ->amount('1') // 1 EUR - partial reversal (amount less than the original), full reversal the original amount
