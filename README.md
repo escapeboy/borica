@@ -4,7 +4,6 @@ All kudos goes to original author https://github.com/mirovit/borica-api
 Please star it! 
 I only ported it for easy integration with Laravel.
 
-## WARNING: NOT TESTED!
 ### Installation
 ```
 composer require escapeboy/borica
@@ -22,10 +21,11 @@ php artisan vendor:publish --provider="Borica\BoricaServiceProvider"
 ```
 
 ## Usage
-
-### Registering of a transaction
 ```
 $borica = new \Borica\Factory();
+```
+### Registering of a transaction
+```
 $borica->request()
         ->amount('1') // 1 EUR
         ->orderID(1) // Unique identifier in your system
@@ -48,4 +48,18 @@ $factory->request()
         ->amount('1') // 1 EUR - partial reversal (amount less than the original), full reversal the original amount
         ->orderID(1) // Unique identifier in your system
         ->reverse(); // Type of the request
+```
+### Parse response
+```
+$borica = new \Borica\Factory();
+$borica = $borica->response($request->eBorica);
+//Methods
+$borica->transactionCode();
+$borica->transactionTime();
+$borica->amount();
+$borica->terminalID();
+$borica->orderID();
+$borica->notSuccessful();
+$borica->isSuccessful();
+$borica->responseCode();
 ```
